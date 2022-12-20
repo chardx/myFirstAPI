@@ -9,7 +9,7 @@ module.exports.connectToDB = connectToDB;
 function connectToDB() {
 
     const LOCAL_URL_STRING = "mongodb://127.0.0.1:27017";
-    const ONLINE_URL_STRING = "mongodb+srv://admin-richard:636471@cluster0.m61kfnn.mongodb.net"
+    
     mongoose.set("strictQuery", true);
 
     mongoose.connect(process.env.ONLINE_URL_STRING + "/wikiDB")
