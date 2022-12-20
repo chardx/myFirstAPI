@@ -71,7 +71,7 @@ app.route("/articles")
 
 app.route("/articles/:title")
     .get(function(req,res){
-        
+        const requestedTitle = req.params.title;
         Article.find({title : requestedTitle}, function(err, foundArticle){
 
             if(foundArticle){
